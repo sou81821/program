@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MOVIE MASH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Atomic+Age' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/base.css">
+    <script type="text/javascript" src="js/base.js"></script>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="title">
+        <a class="title" href="#" >MOVIE MASH</a>
+      </div>
+    </nav>
+    <!-- navigation bar end -->
+    <!-- main contents -->
+
+    <h2 id="statement">好きな映画を選択してください</h2>
+    <br>
+
+    <div id="choose_zone" class="container">
+      
+        <div class="col-sm-2">
+        </div>
+
+        <div id="movie0" class="col-sm-4">
+          <div class="thumbnail">
+            <img src="" alt="...">
+            <div class="caption">
+              <h3 class="movie_title"></h3>
+              <a href="javascript:submitData(0);" class="btn btn-primary center-block" role="button">選択</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="movie1" class="col-sm-4">
+          <div class="thumbnail">
+            <img src="" alt="...">
+            <div class="caption">
+              <h3 class="movie_title"></h3>
+              <a href="javascript:submitData(1);" class="btn btn-primary center-block" role="button">選択</a>
+            </div>
+          </div>
+        </div>
+
+
+    </div>
+
+    <hr id="border">
+
+    <div id="sentence">
+      <h4>あなたと嗜好が似ているユーザーはこちらの映画も見ています</h4>
+    </div>
+
+    <br>
+
+    <div id="recommend_zone" class="container">
+    </div>
+    <!-- main contents -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="js/base.js"></script>
+    <script type="text/javascript">
+    submitData();
+    </script>
+  </body>
+</html>

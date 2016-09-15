@@ -1,0 +1,33 @@
+package enshu4.cardgame.t1165028.card;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class User extends Player{
+	public User(String name){
+		super(name);    //Player’¤Î’Ì¾’Á°’¤Ä’¤­’¥³’¥ó’¥¹’¥È’¥é’¥¯’¥¿’¤Ë’¤ï’¤¿’¤¹
+	}
+	
+	public void chooseHand(ArrayList<Player> playerList, CardDeck cardDeck) throws IOException{
+		
+		Player [] p = playerList.toArray(new Player [2]);
+		System.out.println("’¥«’¡¼’¥É’¤ò’¸ò’´¹’¤·’¤Þ’¤¹’¡£");
+		System.out.println("’¸ò’´¹’¤¹’¤ë’¥«’¡¼’¥É’¤ò’¡¢’¥«’¡¼’¥É’¤Ë’³ä’¤ê’Åö’¤Æ’¤é’¤ì’¤Æ’¤¤’¤ë’¿ô’»ú’¤¬’Âç’¤­’¤¤’½ç’¤Ë’¡¢’¥³’¥ó’¥Þ’¶è’ÀÚ’¤ê’¤Ë’Æþ’ÎÏ’¤·’¤Æ’¤¯’¤À’¤µ’¤¤’¡£");  
+                                                 //’¥«’¡¼’¥É’¤Ë’³ä’¤ê’Åö’¤Æ’¤é’¤ì’¤Æ’¤¤’¤ë’¿ô’»ú’¤¬’Âç’¤­’¤¤’½ç’¤Ë’¸ò’´¹’¤¹’¤ë’¥«’¡¼’¥É’¤ò’»Ø’Äê’¤µ’¤»’¤ë
+		BufferedReader br =
+				new BufferedReader(new InputStreamReader(System.in));
+		String str = br.readLine();
+		
+		String[] a = str.split(",");     //’»Ø’Äê’¤·’¤¿’¿ô’»ú’¤ò’¥³’¥ó’¥Þ’¶è’ÀÚ’¤ê’¤Ç’ÇÛ’Îó’¤Ë’Æþ’ÎÏ
+		for(int i=0;i<a.length;i++){     //’»Ø’Äê’¤·’¤¿’¥«’¡¼’¥É’¤ò’ºï’½ü’¤¹’¤ë
+			p[0].cardRemove(Integer.parseInt(a[i]));
+		}
+	
+		while(p[0].size() < 5){          //’¼ê’»¥’¤¬’£µ’Ëç’¤Ë’¤Ê’¤ë’¤Þ’¤Ç’¥Ç’¥Ã’¥­’¤«’¤é’¥«’¡¼’¥É’¤ò’Êä’½¼
+			p[0].addCard(cardDeck.getCard());
+		}
+	}
+	
+}

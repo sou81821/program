@@ -1,0 +1,64 @@
+
+.title{
+	color: #cc2828;
+	text-align: center;
+	font-size: 35px;
+	font-family: 'Atomic Age', cursive;
+}
+
+#statement{
+	text-align: center;
+	font-size: 30px;
+}
+
+#choose_zone .thumbnail{
+	border: none;
+}
+
+#choose_zone img{
+	width: 200px;
+	hehight: 300px;
+}
+
+#choose_zone .movie_title{
+	color: #cc2828;
+	font-size: 32px;
+	font-family: 'Atomic Age', cursive;
+}
+
+#choose_zone a{
+	width: 120px;
+}
+
+#recommend_zone .thumbnail{
+	border: none;
+}
+
+#recommend_zone img{
+	width: 80px;
+	hehight: 120px;
+}
+
+#recommend_zone .movie_title{
+	color: #cc2828;
+	font-size: 20px;
+	font-family: 'Atomic Age', cursive;
+}
+
+.movie_title{
+	text-align: center;
+}
+
+#sentence{
+	text-align: left;
+	color: #ff9933;
+}
+
+#border{
+	border-top: 4px double #ff9d9d;
+	width: 100%;
+	height: 3;
+}
+
+
+
