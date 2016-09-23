@@ -3,6 +3,7 @@
 
 import pdb
 import sys
+from collections import defaultdict
 
 # 10. 変換
 def convert(lines):
@@ -62,6 +63,19 @@ def get_prefecture_set(lines):
     for pref in enumerate(prefectures):
         print pref[1]
 
+# 18. 各行をあるカラムでソート
+def file_sort(lines):
+    for line in sorted(lines, key=lambda x:x.split("\t")[2], reverse=True):
+        print line,
+
+# 19. 1カラム目の単語を，出現頻度によりソートしその単語を出力
+def sort_by_FOA(lines):
+    pref_count = defaultdict(int)
+    for line in lines:
+        pref_count[line.split("\t")[0]] += 1
+    for k, v in sorted(pref_count.items(), key=lambda x:x[1], reverse=True):
+        print k
+
 
 if __name__ == '__main__':
     with open("hightemp.txt") as f:
@@ -72,4 +86,6 @@ if __name__ == '__main__':
     #head_print(lines)
     #tail_print(lines)
     #devide_n_file(lines)
-    get_prefecture_set(lines)
+    #get_prefecture_set(lines)
+    #file_sort(lines)
+    sort_by_FOA(lines)
